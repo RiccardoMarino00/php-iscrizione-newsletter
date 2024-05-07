@@ -53,6 +53,9 @@ var_dump($email_controllata);
             </div>
         </div>
     </main>
+    <?php
+    include __DIR__. '/partials/footer.php'
+    ?>
 </body>
 </html>
 
@@ -79,7 +82,6 @@ var_dump($email_controllata);
     ol,
     menu{
         list-style: none;
-        margin-top: 2%;
     }
 
 
@@ -103,8 +105,29 @@ var_dump($email_controllata);
     .social{
         text-align:center;
         margin-left: 90px;
+        margin-top: 4%;
+
     }
  
+
+    .footer-container{
+        justify-content: space-between;
+        text-align:center;
+
+    }
+
+    a{
+        text-decoration: none;
+        color: currentcolor;
+    }
+
+    footer{
+        margin-top: 50px
+    }
+
+    main{
+        margin-top: 50px;
+    }
 
 
 </style>
