@@ -2,7 +2,11 @@
     <footer>
         <div class="container-md">
             <div class="d-flex footer-container">
-                <div>Logo</div>
+                <div>
+                    <h1>
+                        NEWS LETTER
+                    </h1>
+                </div>
                 <div>
                     <ul class="d-flex">
                         <li class="px-2"><strong>Link <i class="fa-solid fa-right-long"></i></strong></li>

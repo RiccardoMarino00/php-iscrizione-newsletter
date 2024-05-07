@@ -129,5 +129,9 @@ var_dump($email_controllata);
         margin-top: 50px;
     }
 
+    a:hover{
+        color: white;
+    }
+
 
 </style>
