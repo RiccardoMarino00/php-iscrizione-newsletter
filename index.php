@@ -3,12 +3,12 @@
 
 // var_dump($_POST);
 // $email_controllata = checkEmail($email);
-$email = $_POST['email'] ?? null;
-include  __DIR__. '/partials/utilities.php';
+// $email = $_POST['email'] ?? null;
+// include  __DIR__. '/partials/utilities.php';
 
-$email_controllata = checkEmail($email) ?? null;
+// $email_controllata = checkEmail($email) ?? null;
 
-var_dump($email_controllata);
+// var_dump($email_controllata);
 
 ?>
 
@@ -30,25 +30,10 @@ var_dump($email_controllata);
         <div class="contenitore-main container-md">
             <div class="row">
                 <div class="col">
-                    <form action="" method="post" >
+                    <form action="./subscription.php" method="post" >
                         <input type="email" id="email" class="input-email" name="email">
                         <button  class="btn btn-outline-primary">INVIO</button>
                     </form>
-                    <?php
-                    if ($email_controllata === true){
-                        ?>
-                        <div class="alert alert-success" role="alert">
-                          Accesso consentito!
-                        </div>
-                        <?php
-                    } elseif ($email_controllata === false && $email != '')  {
-                        ?>
-                        <div class="alert alert-danger" role="alert" >
-                          Accesso negato!
-                        </div>
-                        <?php
-                    };
-                    ?>
                 </div>
             </div>
         </div>
