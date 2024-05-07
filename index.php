@@ -1,21 +1,21 @@
 <?php
+
+
 // var_dump($_POST);
 // $email_controllata = checkEmail($email);
 $email = $_POST['email'] ?? null;
+include  __DIR__. '/partials/utilities.php';
+
+$email_controllata = checkEmail($email) ?? null;
+
+var_dump($email_controllata);
 
 
-function checkEmail(mail){
 
-    $checkedEmail = str_contains(mail, '@') ?? null;
-    $checkedDotEmail = str_contains(mail, '.') ?? null;
-    if ($checkedEmail === true && $checkedDotEmail === true){
-        $message = 'Accesso riuscito';
-    } else {
-        $message = 'Accesso negato';
-    }
 
-    return $message;
-};
+
+
+
 ?>
 
 
@@ -32,11 +32,25 @@ function checkEmail(mail){
         <div class="contenitore">
             <div class="row">
                 <div class="col">
-                    <form action="" method="post">
-                        <input type="email" id="email" name="email">
-                        <button>INVIO</button>
+                    <form action="" method="post" >
+                        <input type="email" id="email" class="input-email" name="email">
+                        <button  class="btn btn-outline-primary">INVIO</button>
                     </form>
-                    <p><?php echo $message; ?></p>
+                    <?php
+                    if ($email_controllata === true){
+                        ?>
+                        <div class="alert alert-success" role="alert">
+                          Accesso consentito!
+                        </div>
+                        <?php
+                    } else  {
+                        ?>
+                        <div class="alert alert-danger" role="alert">
+                          Accesso negato!
+                        </div>
+                        <?php
+                    };
+                    ?>
                 </div>
             </div>
         </div>
@@ -46,6 +60,11 @@ function checkEmail(mail){
 
 
 <style>
+
+    .input-email{
+        border: 2px solid lightblue;
+        border-radius: 5px;
+    }
 
 
     .contenitore{
