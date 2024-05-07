@@ -41,9 +41,9 @@ var_dump($email_controllata);
                           Accesso consentito!
                         </div>
                         <?php
-                    } else  {
+                    } elseif ($email_controllata === false && $email != '')  {
                         ?>
-                        <div class="alert alert-danger" role="alert">
+                        <div class="alert alert-danger" role="alert" >
                           Accesso negato!
                         </div>
                         <?php
