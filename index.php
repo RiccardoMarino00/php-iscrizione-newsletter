@@ -10,12 +10,6 @@ $email_controllata = checkEmail($email) ?? null;
 
 var_dump($email_controllata);
 
-
-
-
-
-
-
 ?>
 
 
@@ -26,10 +20,14 @@ var_dump($email_controllata);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>PHP Form News Letter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <main>
-        <div class="contenitore">
+    <?php
+    include __DIR__. '/partials/header.php';
+    ?>
+    <main class= "main-sec">
+        <div class="contenitore-main container-md">
             <div class="row">
                 <div class="col">
                     <form action="" method="post" >
@@ -67,7 +65,46 @@ var_dump($email_controllata);
     }
 
 
-    .contenitore{
+    .contenitore-main{
         text-align: center;
     }
+
+    .row{
+        display: flex;
+
+    }
+
+    ul,
+    li,
+    ol,
+    menu{
+        list-style: none;
+        margin-top: 2%;
+    }
+
+
+
+
+    body{
+        background-color: #FFB266;
+        font-family: arial;
+    }
+
+    .contenitore{
+        
+    }
+
+    .riga-header{
+        justify-content: space-between;
+        text-align: center;
+    }
+
+
+    .social{
+        text-align:center;
+        margin-left: 90px;
+    }
+ 
+
+
 </style>
